@@ -1,0 +1,37 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driverClassName: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3309/dynamic-dashboard-microservice
+    username: root
+    password: root
+
+  application:
+    name: IDENTITY-SERVICE
+
+server.port: 8081
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tanviraj1234@gmail.com
+    password: cwlhkhmmhtbxvuks
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
